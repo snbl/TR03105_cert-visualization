@@ -1,0 +1,172 @@
+// Copyright (c) 2016, Stefan Brandl. All rights reserved.
+// Use of this DOT source is governed by the BSD-3-Clause license
+// that can be found in the LICENSE file of the cert-maps repository.
+// Version: v0.2
+// Date: 2014-02-19
+
+digraph G {
+//layout definitions
+ graph [overlap="false",start=1,sep="+25",splines="spline"]
+ node [fontname=Arial,fontsize=8]
+ node [style=filled]
+ node [fillcolor="#EEEEEE"]
+ node [color="#EEEEEE"]
+ edge [color="blue",arrowhead=tee,arrowsize=0.5,headclip=true,tailclip=true,fontname=Arial,fontsize=7]
+
+//ROOT.CVCA.SET
+ CVCA_CERT_00 -> CVCA_KEY_00 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+
+//Cert.Set.1
+ CVCA_CERT_00 -> DV_CERT_1 [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ DV_CERT_1 -> DV_KEY_01 [dir=both,color=red,arrowhead=odot,arrowtail=odot] 
+ CVCA_CERT_00 -> DV_CERT_1a  [dir="both",color="blue",arrowhead="tee",arrowtail="none"]
+ CVCA_CERT_00 -> DV_CERT_1b
+ CVCA_CERT_00 -> DV_CERT_1c
+ CVCA_CERT_00 -> DV_CERT_1d
+ CVCA_CERT_00 -> DV_CERT_1e
+ CVCA_CERT_00 -> DV_CERT_1f
+ CVCA_CERT_00 -> DV_CERT_1g
+ CVCA_CERT_00 -> DV_CERT_1h
+ CVCA_CERT_00 -> DV_CERT_1i
+ CVCA_CERT_00 -> DV_CERT_1j
+ DV_CERT_1 -> IS_CERT_1 [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ IS_CERT_1 -> IS_KEY_01 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ 
+//Cert.Set.2
+ CVCA_CERT_00 -> DV_CERT_2 [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ DV_CERT_2 -> DV_KEY_02 [dir=both,color=red,arrowhead=odot,arrowtail=odot] 
+ DV_CERT_2 -> IS_CERT_2a  [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ IS_CERT_2a -> IS_KEY_02 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ DV_CERT_2 -> IS_CERT_2b  [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]  
+ IS_CERT_2b -> IS_KEY_02 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+
+//Cert.Set.3
+ CVCA_CERT_00 -> DV_CERT_3 [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ DV_CERT_3 -> DV_KEY_03 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ DV_CERT_3 -> IS_CERT_3a  [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ IS_CERT_3a -> IS_KEY_03 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ DV_CERT_3 -> IS_CERT_3b  [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ IS_CERT_3b -> IS_KEY_03 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+
+//Cert.Set.4
+ CVCA_CERT_00 -> DV_CERT_4 [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ DV_CERT_4 -> DV_KEY_04 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ DV_CERT_4 -> IS_CERT_4  [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ IS_CERT_4 -> IS_KEY_04 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+
+//Cert.Set.5
+ CVCA_CERT_00 -> DV_CERT_5 [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ DV_CERT_5 -> DV_KEY_05 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ DV_CERT_5 -> IS_CERT_5  [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ IS_CERT_5 -> IS_KEY_05 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+
+//Cert.Set.6
+ CVCA_CERT_00 -> DV_CERT_6 [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ DV_CERT_6 -> DV_KEY_06 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ CVCA_CERT_00 -> DV_CERT_6a [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ DV_CERT_6a -> DV_KEY_06 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ DV_KEY_06 -> IS_CERT_6a  [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ IS_CERT_6a -> IS_KEY_06 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ DV_KEY_06 -> IS_CERT_6b  [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ IS_CERT_6b -> IS_KEY_06 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+
+//Cert.Set.7
+ CVCA_CERT_00 -> LINK_CERT_7 [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ LINK_CERT_7 -> CVCA_KEY_07 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ CVCA_CERT_00 -> DV_CERT_7a [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ DV_CERT_7a -> DV_KEY_07 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ LINK_CERT_7 -> DV_CERT_7b [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ DV_CERT_7b -> DV_KEY_07 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+
+//Cert.Set.8
+ LINK_CERT_7 -> LINK_CERT_8 [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ LINK_CERT_8 -> CVCA_KEY_08 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ LINK_CERT_8 -> LINK_CERT_9 [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ LINK_CERT_9 -> CVCA_KEY_09 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ LINK_CERT_9 -> DV_CERT_9 [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ DV_CERT_9 -> DV_KEY_09 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+
+//Cert.Set.10
+ DV_KEY_10 -> LINK_CERT_10
+ LINK_CERT_10 -> CVCA_KEY_10 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ CVCA_CERT_00 -> DV_CERT_10a [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ DV_CERT_10a -> DV_KEY_10 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ CVCA_CERT_00 -> DV_CERT_10b [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ DV_CERT_10b -> DV_KEY_10 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ DV_KEY_10 -> DV_CERT_10c
+ DV_CERT_10c -> DV_KEY_10 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ DV_KEY_10 -> DV_CERT_10d
+ DV_CERT_10d -> DV_KEY_10 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ CVCA_CERT_00 -> IS_CERT_10
+ IS_CERT_10 -> IS_KEY_10 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ 
+//Cert.Set.11
+ IS_KEY_11 -> LINK_CERT_11a
+ LINK_CERT_11a -> CVCA_KEY_00 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ LINK_CERT_9 -> LINK_CERT_11b [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ LINK_CERT_11b -> CVCA_KEY_11 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ CVCA_CERT_00 -> DV_CERT_11a [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ DV_CERT_11a -> DV_KEY_11 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ IS_KEY_11 -> DV_CERT_11b
+ DV_CERT_11b -> DV_KEY_11 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ IS_KEY_11 -> DV_CERT_11c
+ DV_CERT_11c -> DV_KEY_11 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ DV_KEY_11 -> IS_CERT_11a [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ IS_CERT_11a -> IS_KEY_11 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ IS_KEY_11 -> IS_CERT_11b
+ IS_CERT_11b -> IS_KEY_11 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ LINK_CERT_11b -> IS_CERT_11c
+ IS_CERT_11c -> IS_KEY_11 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+
+//Cert.Set.12
+ CVCA_CERT_00 -> DV_CERT_12a [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ DV_CERT_12a -> DV_KEY_12 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ CVCA_CERT_00 -> DV_CERT_12b
+ DV_CERT_12b -> DV_KEY_12 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ CVCA_CERT_00 -> DV_CERT_12c
+ DV_CERT_12c -> DV_KEY_12 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ CVCA_CERT_00 -> DV_CERT_12d
+ DV_CERT_12d -> DV_KEY_12 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ CVCA_CERT_00 -> DV_CERT_12e
+ DV_CERT_12e -> DV_KEY_12 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ CVCA_CERT_00 -> DV_CERT_12f
+ DV_CERT_12f -> DV_KEY_12 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ CVCA_CERT_00 -> DV_CERT_12g
+ DV_CERT_12g -> DV_KEY_12 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ CVCA_CERT_00 -> DV_CERT_12h
+ DV_CERT_12h -> DV_KEY_12 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ CVCA_CERT_00 -> DV_CERT_12i
+ DV_CERT_12i -> DV_KEY_12 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ CVCA_CERT_00 -> DV_CERT_12j
+ DV_CERT_12j -> DV_KEY_12 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ CVCA_CERT_00 -> DV_CERT_12k
+ DV_CERT_12k -> DV_KEY_12 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ CVCA_CERT_00 -> DV_CERT_12l
+ DV_CERT_12l -> DV_KEY_12 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ CVCA_CERT_00 -> DV_CERT_12m
+ DV_CERT_12m -> DV_KEY_12 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ CVCA_CERT_00 -> DV_CERT_12o
+ DV_CERT_12o -> DV_KEY_12 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ CVCA_CERT_00 -> DV_CERT_12p
+ DV_CERT_12p -> DV_KEY_12 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ CVCA_CERT_00 -> DV_CERT_12q
+ DV_CERT_12q -> DV_KEY_12 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+
+//Cert.Set.13
+ LINK_CERT_11b -> LINK_CERT_13 [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ LINK_CERT_13 -> CVCA_KEY_13 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ LINK_CERT_13 -> DV_CERT_13 [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ DV_CERT_13 -> DV_KEY_13 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ DV_CERT_13 -> IS_CERT_13 [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ IS_CERT_13 -> IS_KEY_13 [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+
+//Cert.Set.14
+ CVCA_CERT_00 -> DV_CERT_14a [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ DV_CERT_14a -> DV_KEY_14a [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ CVCA_CERT_00 -> DV_CERT_14b
+ DV_CERT_14b -> DV_KEY_14b [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ DV_CERT_14b -> IS_CERT_14a [color="gold",arrowsize="0.8",arrowhead="normal",arrowtail="none",penwidth="1.5"]
+ IS_CERT_14a -> IS_KEY_14a [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+ DV_CERT_14a -> IS_CERT_14b
+ IS_CERT_14b -> IS_KEY_14b [dir=both,color=red,arrowhead=odot,arrowtail=odot]
+}
