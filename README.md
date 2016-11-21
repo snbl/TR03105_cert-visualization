@@ -16,7 +16,7 @@ Connections between objects are defined by the following link types:
 Usage
 -----
 
-`$ neato -Tpng tr03105p32v13_cert_map.dot -o tr03105p32v13_cert_map.png`
+`$ neato -Tpng tr03105p32v13_cert-map.dot -o tr03105p32v13_cert-map.png`
 
 Changelog
 ---------
